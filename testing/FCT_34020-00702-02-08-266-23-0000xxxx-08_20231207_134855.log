@@ -1,0 +1,167 @@
+Taylor Gateway Functional Test
+Test Software version 0.02
+Test started at: Tue Jun 20 13:47:10 2023
+settings files used:
+  settings.ini            : 2023-06-13 PdV | MD5: 6db6031822eeaa68d73cbeee1a99804b
+JIG 24V: -24.4V
+JIG ambient temperature: 29.6degC
+
+Data Matrix - Serial Number
+  Barcode: 218-00004T00233300001
+PSU start
+  setting voltage to 2V
+    3V3 voltage:                 0.006V 
+    3V8 voltage disabled:        0.005V 
+    3V3aux voltage:              1.864V 
+    1V8 voltage:                 0.003V 
+    current:                     6.75mA
+  setting voltage to 6V
+    3V3 voltage:                 3.345V 
+    3V8 voltage disabled:        0.456V 
+    3V3aux voltage:              3.295V 
+    1V8 voltage:                 1.789V 
+    current:                    165.81mA
+  setting voltage to 12V
+    3V3 voltage:                 3.345V   PASS
+    3V8 voltage disabled:        0.425V   PASS
+    3V3aux voltage:              3.299V   PASS
+    1V8 voltage:                 1.789V   PASS
+    current:                    374.49mA
+UUID create
+  UUID: 72440c2c-82d5-4e6f-8fc7-29335fa66af1
+  Salt: b'9zaq9/ZjwqPhdHgM8Y9IT7U08pX6Eimj'
+  Hash: b'KkuykvxGoihUZswmciMRl/eIc30UZFMO'
+  Hostkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHUwm3aEUchWoQL17HfO9gwBbG6iPzT/R3g9Atir9P/q 
+  Clientkey: -----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUx
+OQAAACDB/RUIy3x5Vv1DJGeDXpAmMcGLaq9v9zlaZKXFUjNOhwAAAIjccQm73HEJuwAAAAtzc2gt
+ZWQyNTUxOQAAACDB/RUIy3x5Vv1DJGeDXpAmMcGLaq9v9zlaZKXFUjNOhwAAAEA2fiheXEwHi3qp
+cGFM8O6HRrUHjHPlWWsi2078SS9fscH9FQjLfHlW/UMkZ4NekCYxwYtqr2/3OVpkpcVSM06HAAAA
+AAECAwQF
+-----END OPENSSH PRIVATE KEY-----
+  UUID file: C:\projects\PNE25-TaylorGateway\Firmware\uuidfile.bin
+    removed previous (MD5 9dad8b049d97e60951a4f528d5680d13)
+    created new file (MD5 e27ff37a6f81a51017a6f3a070595dec)
+Firmware ESP32 application
+  erasing esp32
+    esptool.py v4.6.1
+    Serial port COM8
+    Connecting.....
+    Chip is ESP32-D0WD-V3 (revision v3.0)
+    Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+    Crystal is 40MHz
+    MAC: 0c:8b:95:2a:b2:c8
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Erasing flash (this may take a while)...
+    Chip erase completed successfully in 12.9s
+    Hard resetting via RTS pin...
+    
+  programming esp32
+    C:\projects\PNE25-TaylorGateway\Firmware\bootloader.bin
+         address 0x1000
+         MD5 1b41dd4ecd2466b1edc209aec0b2ec1d
+    C:\projects\PNE25-TaylorGateway\Firmware\partition-table.bin
+         address 0x9000
+         MD5 59b0ebdacf845299dbe50c7b90d3a930
+    C:\projects\PNE25-TaylorGateway\Firmware\taylor_gateway_v2.1.0_20230613.bin
+         address 0x10000
+         MD5 975d8d205e9c150425117f91a5c4d5db
+    C:\projects\PNE25-TaylorGateway\Firmware\ota_data_initial.bin
+         address 0x210000
+         MD5 84d04c9d6cc8ef35bf825d51a5277699
+    C:\projects\PNE25-TaylorGateway\Firmware\uuidfile.bin
+         address 0xF000
+         MD5 e27ff37a6f81a51017a6f3a070595dec
+    esptool.py v4.6.1
+    Serial port COM8
+    Connecting....
+    Chip is ESP32-D0WD-V3 (revision v3.0)
+    Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+    Crystal is 40MHz
+    MAC: 0c:8b:95:2a:b2:c8
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Configuring flash size...
+    Flash will be erased from 0x00001000 to 0x00007fff...
+    Flash will be erased from 0x00009000 to 0x00009fff...
+    Flash will be erased from 0x00010000 to 0x000f6fff...
+    Flash will be erased from 0x00210000 to 0x00211fff...
+    Flash will be erased from 0x0000f000 to 0x0000ffff...
+    Compressed 26080 bytes to 16363...
+    Wrote 26080 bytes (16363 compressed) at 0x00001000 in 1.7 seconds (effective 119.6 kbit/s)...
+    Hash of data verified.
+    Compressed 3072 bytes to 163...
+    Wrote 3072 bytes (163 compressed) at 0x00009000 in 0.1 seconds (effective 378.3 kbit/s)...
+    Hash of data verified.
+    Compressed 943280 bytes to 641856...
+    Wrote 943280 bytes (641856 compressed) at 0x00010000 in 57.1 seconds (effective 132.0 kbit/s)...
+    Hash of data verified.
+    Compressed 8192 bytes to 31...
+    Wrote 8192 bytes (31 compressed) at 0x00210000 in 0.1 seconds (effective 683.1 kbit/s)...
+    Hash of data verified.
+    Compressed 820 bytes to 406...
+    Wrote 820 bytes (406 compressed) at 0x0000f000 in 0.1 seconds (effective 51.3 kbit/s)...
+    Hash of data verified.
+    
+    Leaving...
+    Hard resetting via RTS pin...
+    
+Firmware EFM8 application
+  programming efm8
+    C:\projects\PNE25-TaylorGateway\Firmware\EFM8_Gateway_V2.hex
+         MD5 567493e0c5589e0ac285b8aec230bf4e
+  PASS
+Test mode
+  :TESTER:OK: v2.1.0
+    testmode PASS
+Testmode - CONFMODEM
+  waiting for modem boot.....
+  PASS: :CONFMODEM:ERROR:no modem installed
+  3V8 voltage enabled:        3.873V   PASS
+IMEI
+  retrieving IMEI.  PASS
+  IMEI: :IMEI:ERROR:no modem installed
+ICCID
+  retrieving ICCID.  PASS
+  ICCID: :ICCID:ERROR:no modem installed
+PLC CW / NW
+  set PSU to 6V
+    :PLC_CW:OK:  PASS
+    PLC voltage:        2.222V                          PASS
+    PLC frequency:      137.217kHz                      PASS
+    current at 6 V:     161.29mA                        PASS
+    :PLC_NW:OK:  PASS
+  set PSU to 12V
+    current at 12V:     96.19mA
+PLC test
+    :PLC_TEST:OK:4@-63 4@0 1372@0 168@-2 1@-45 12@-4 1374@-89 183@-88 1300@-55 162@-57 4@-76 3@-56 1305@34 169@32 4@-26 7@-74  PASS
+  A: 4@-63 4@0 1372@0 168@-2
+  B: 1@-45 12@-4 1374@-89 183@-88
+    len(A3)/8 ~ len(A4) => 171.5 ~ 168.0                PASS
+    len(B3)/8 ~ len(B4) => 171.75 ~ 183.0               PASS
+    abs(A3-B3) = abs(0.0 - -89.0) = 89.0 ~ 90           PASS
+    abs(A4-B4) = abs(-2.0 - -88.0) = 86.0 ~ 90          PASS
+  C: 1300@-55 162@-57 4@-76 3@-56
+  D: 1305@34 169@32 4@-26 7@-74
+    len(C3)/8 ~ len(C4) => 162.5 ~ 162.0                PASS
+    len(D3)/8 ~ len(D4) => 163.125 ~ 169.0              PASS
+    abs(C1-D1) = abs(-55.0 - 34.0) = 89.0 ~ 90          PASS
+    abs(C2-D2) = abs(-57.0 - 32.0) = 89.0 ~ 90          PASS
+UUID
+  :UUID:OK:72440C2C82D54E6F8FC729335FA66AF1
+Ethernet
+  tx: tx-1dXV1dXV1dUICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+Pw==  PASS
+  rx: rx-1dXV1dXV1dUICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+Pw==  PASS
+    PASS, tx and rx are equal
+LED test
+  LED           R    G    B    intensity
+  LED 1 off     0    0    0      0         PASS
+  LED 2 off     0    0    0      0         PASS
+  LED 1 on     20  235    0     34         PASS
+  LED 2 on     18  238    0    133         PASS
+Test time: 103.0sec
+>>> OK stamp
+Test successful

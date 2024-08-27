@@ -1,0 +1,443 @@
+Test Software version 1.91
+Test started at: Tue Jan 23 13:17:17 2024
+using settings version: 2024-01-09_!! | MD5: 531bd054cb933c4eaf4ff1996617e213
+jig 24V: 23.4V
+PT1000 jig temperature: 37.3degC
+
+Sunspec bridge transmit disabled
+PSU start
+  setting voltage to 4V
+    5V voltage A:         3.94V                              PASS
+    3V3 voltage A:        3.30V                              PASS
+    current A:           13.76mA    circuit actual:  7.26mA  PASS
+    5V voltage B:         3.94V                              PASS
+    3V3 voltage B:        3.32V                              PASS
+    current B:           14.16mA    circuit actual:  7.61mA  PASS
+    5V voltage C:         3.89V                              PASS
+    3V3 voltage C:        3.33V                              PASS
+    current C:           24.65mA    circuit actual: 18.10mA  PASS
+  setting voltage to 7V
+    5V voltage A:         5.01V                              PASS
+    3V3 voltage A:        3.30V                              PASS
+    current A:           13.63mA    circuit actual:  7.14mA  PASS
+    5V voltage B:         5.00V                              PASS
+    3V3 voltage B:        3.32V                              PASS
+    current B:           14.14mA    circuit actual:  7.60mA  PASS
+    5V voltage C:         5.01V                              PASS
+    3V3 voltage C:        3.33V                              PASS
+    current C:           24.85mA    circuit actual: 18.30mA  PASS
+PSU check
+    5V voltage A:        5.006V                              PASS
+    3V3 voltage A:       3.297V                              PASS
+    current A:           13.565mA    circuit actual: 7.071mA    PASS
+    bias voltage A:      1.647V                              PASS
+    5V voltage B:        5.003V                              PASS
+    3V3 voltage B:       3.321V                              PASS
+    current B:           14.093mA    circuit actual: 7.551mA    PASS
+    bias voltage B:      1.663V                              PASS
+    5V voltage C:        5.006V                              PASS
+    3V3 voltage C:       3.326V                              PASS
+    current C:           24.817mA    circuit actual: 18.267mA    PASS
+    bias voltage C:      1.664V                              PASS
+Test time: 6.0sec
+Programming controllers
+  Buck A  EFM8_Buck_Release4k_v1_2_1.hex  PASS
+  Buck B  EFM8_Buck_Release4k_v1_2_1.hex  PASS
+  Buck C  EFM8_Buck_Release4kC_v1_2_1.hex  PASS
+  Comms   EFM8_testfirmware_v1_0_0.hex  PASS
+Test time: 13.4sec
+Buck Temperature Calibration
+  waiting for controllers ready calibrating...... done
+  PT1000 4 wire
+  ambient temperature: 25.9degC
+  Buck A
+    temperature:            2007 (ADC) | 809.3mV
+    config:                 0xFFFF | 65535
+    new config:             0x0720 | 1824
+    writing new config
+    calibrated temperature: 26.1degC
+    Locking, writing 0x00 at 0xFFF
+  Buck B
+    temperature:            2053 (ADC) | 827.8mV
+    config:                 0xFFFF | 65535
+    new config:             0x074E | 1870
+    writing new config
+    calibrated temperature: 26.1degC
+    Locking, writing 0x00 at 0xFFF
+  Buck C
+    temperature:            2103 (ADC) | 848.0mV
+    config:                 0xFFFF | 65535
+    new config:             0x0780 | 1920
+    writing new config
+    calibrated temperature: 26.1degC
+    Locking, writing 0x00 at 0xFFF
+Unique ID
+    id A:             0x0A8DF867 | 177076327
+    id B:             0x0A8DF868 | 177076328
+    id C:             0x0A8DF865 | 177076325
+    id Comms:         0x0A8DF86F | 177076335
+Test time: 26.0sec
+Test time: 31.1sec
+COMMS
+  setting PSU to 0V, 0V, 8V
+  switching port1 baudrate to 115200
+  SZRV
+    data: C3 03 02 1E 02 1B - 873.3, 868.5
+    data: C3 02 01 F7 01 F3 - 810.5, 804.1
+    data: C3 01 01 F8 01 F4 - 812.1, 805.7
+    data: C3 00 01 F8 01 F5 - 812.1, 807.3
+    SZRV: 812+807j    PASS
+  Mute
+    closing relay TP53
+    data: 15 01 01 F7 01 F6 - 810.5, 808.9
+    data: 15 00 01 F8 01 F5 - 812.1, 807.3
+    Mute12V: 0+0j | 0mV    PASS
+    data: 15 01 01 F6 01 F8 - 808.9, 812.1
+    data: 15 00 01 F7 01 F7 - 810.5, 810.5
+    Mute2V: -2+3j | 4mV    PASS
+    data: 15 01 01 E7 01 FC - 784.7, 818.6
+    data: 15 00 01 E7 01 FC - 784.7, 818.6
+    Mute1V: -27+11j | 30mV    PASS
+    release mute signals
+  filter
+    data: 15 01 00 EF 01 9D - 385.1, 665.5
+    data: 15 00 00 F0 01 9C - 386.7, 663.9
+    Filt0V: -425-143j | 449mV | -161deg (199deg)    PASS
+    data: 15 01 00 E5 01 D6 - 369.0, 757.3
+    data: 15 00 00 E6 01 D6 - 370.6, 757.3
+    Filt1V: -442-50j | 444mV | -174deg (186deg)    PASS
+    data: 15 01 00 E8 02 10 - 373.8, 850.8
+    data: 15 00 00 E8 02 10 - 373.8, 850.8
+    Filt2V: -438+44j | 440mV | 174deg (174deg)    PASS
+    data: 15 01 00 FC 02 47 - 406.1, 939.4
+    data: 15 00 00 FB 02 46 - 404.4, 937.8
+    Filt3V: -408+131j | 428mV | 162deg (162deg)    PASS
+    check monotonous: PASS
+  Step Response
+    using best filter: Filt2v
+    data: 43 03 02 50 02 43 - 953.9, 933.0
+    data: 43 02 02 77 02 63 - 1016.7, 984.5
+    data: 43 01 02 76 02 62 - 1015.1, 982.9
+    data: 43 00 02 78 02 62 - 1018.4, 982.9
+    step64v:  142+126j | 189mV | 42deg
+    step128v: 205+177j | 271mV | 41deg
+    step256v: 206+176j | 271mV | 40deg    PASS
+    overshoot I channel: 0.99    PASS
+    overshoot Q channel: 1.01    PASS
+    step response I channel: 0.69    PASS
+    step response Q channel: 0.72    PASS
+  bidirectional
+    skipping, disabled in ini
+Test time: 33.6sec
+
+Buck 001 - 1V mode, no load
+  Switching PSU A,B,C to 12V/0.5A
+  current A:        0.0146A | compensated: 0.0081A    PASS
+  current B:        0.0151A | compensated: 0.0086A    PASS
+  current C:        0.0466A | compensated: 0.0401A    PASS
+  voltage A TP425:  0.010V    PASS
+  voltage B TP325:  0.010V    PASS
+  voltage C TP225:  0.009V    PASS
+  input voltage A:  12.001V    PASS
+  input voltage B:  12.006V    PASS
+  input voltage C:  12.006V    PASS
+  output voltage A: -0.000V    PASS
+  output voltage B: -0.000V    PASS
+  output voltage C: 0.870V    PASS
+  load current:     0.001A    PASS
+  load voltage:     0.871V    PASS
+  Vout:             0.870V    PASS
+  power in A:       0.097W    PASS
+  power in B:       0.103W    PASS
+  power in C:       0.481W    PASS
+  power out A:      -0.000W    PASS
+  power out B:      -0.000W    PASS
+  power out C:      0.001W    PASS
+  efficiency A:     -0.00%    PASS
+  efficiency B:     -0.00%    PASS
+  efficiency C:     0.17%    PASS
+  duty A:           -0.00%    PASS
+  duty B:           -0.00%    PASS
+  duty C:           7.25%    PASS
+  power loss A:     0.097W    PASS
+  power loss B:     0.103W    PASS
+  power loss C:     0.480W    PASS
+  power in:         0.682W    PASS
+  power out:        0.001W    PASS
+  efficiency:       0.12%    PASS
+  Vloss cable load: -0mV    PASS
+  Vloss cable A:    -3mV    PASS
+  Vloss cable B:    -3mV    PASS
+  Vloss cable C:    -4mV    PASS
+Test time: 39.2sec
+Buck 002 - 1V mode, max load
+  current A:        0.0146A | compensated: 0.0081A    PASS
+  current B:        0.0151A | compensated: 0.0086A    PASS
+  current C:        0.0755A | compensated: 0.0690A    PASS
+  voltage A TP425:  0.050V    PASS
+  voltage B TP325:  0.050V    PASS
+  voltage C TP225:  0.049V    PASS
+  input voltage A:  12.002V    PASS
+  input voltage B:  12.006V    PASS
+  input voltage C:  12.005V    PASS
+  output voltage A: -0.003V    PASS
+  output voltage B: -0.003V    PASS
+  output voltage C: 0.841V    PASS
+  load current:     0.400A    PASS
+  load voltage:     0.821V    PASS
+  Vout:             0.834V    PASS
+  power in A:       0.097W    PASS
+  power in B:       0.103W    PASS
+  power in C:       0.828W    PASS
+  power out A:      -0.001W    PASS
+  power out B:      -0.001W    PASS
+  power out C:      0.336W    PASS
+  efficiency A:     -1.19%    PASS
+  efficiency B:     -1.13%    PASS
+  efficiency C:     40.60%    PASS
+  duty A:           -0.02%    PASS
+  duty B:           -0.02%    PASS
+  duty C:           7.01%    PASS
+  power loss A:     0.098W    PASS
+  power loss B:     0.104W    PASS
+  power loss C:     0.492W    PASS
+  power in:         1.029W    PASS
+  power out:        0.333W    PASS
+  efficiency:       32.42%    PASS
+  Vloss cable load: 13mV    PASS
+  Vloss cable A:    -3mV    PASS
+  Vloss cable B:    -3mV    PASS
+  Vloss cable C:    -2mV    PASS
+Test time: 41.5sec
+Buck 003 - off mode, no load
+  current A:        0.0137A | compensated: 0.0072A    PASS
+  current B:        0.0140A | compensated: 0.0075A    PASS
+  current C:        0.0247A | compensated: 0.0182A    PASS
+  voltage A TP425:  0.010V    PASS
+  voltage B TP325:  0.010V    PASS
+  voltage C TP225:  0.010V    PASS
+  input voltage A:  12.002V    PASS
+  input voltage B:  12.006V    PASS
+  input voltage C:  12.007V    PASS
+  output voltage A: 0.004V    PASS
+  output voltage B: 0.003V    PASS
+  output voltage C: 0.004V    PASS
+  load current:     0.001A    PASS
+  load voltage:     0.010V    PASS
+  Vout:             0.006V    PASS
+  power in A:       0.086W    PASS
+  power in B:       0.090W    PASS
+  power in C:       0.219W    PASS
+  power out A:      0.000W    PASS
+  power out B:      0.000W    PASS
+  power out C:      0.000W    PASS
+  efficiency A:     0.00%    PASS
+  efficiency B:     0.00%    PASS
+  efficiency C:     0.00%    PASS
+  duty A:           0.03%    PASS
+  duty B:           0.02%    PASS
+  duty C:           0.03%    PASS
+  power loss A:     0.086W    PASS
+  power loss B:     0.090W    PASS
+  power loss C:     0.219W    PASS
+  power in:         0.395W    PASS
+  power out:        0.000W    PASS
+  efficiency:       0.00%    PASS
+  Vloss cable load: -5mV    PASS
+  Vloss cable A:    -3mV    PASS
+  Vloss cable B:    -3mV    PASS
+  Vloss cable C:    -4mV    PASS
+Test time: 44.4sec
+Buck 004 - normal mode, no load
+  current A:        0.0362A | compensated: 0.0297A    PASS
+  current B:        0.0365A | compensated: 0.0300A    PASS
+  current C:        0.0469A | compensated: 0.0404A    PASS
+  voltage A TP425:  0.010V    PASS
+  voltage B TP325:  0.010V    PASS
+  voltage C TP225:  0.010V    PASS
+  input voltage A:  12.001V    PASS
+  input voltage B:  12.005V    PASS
+  input voltage C:  12.006V    PASS
+  output voltage A: 11.011V    PASS
+  output voltage B: 11.067V    PASS
+  output voltage C: 10.912V    PASS
+  load current:     0.001A    PASS
+  load voltage:     32.999V    PASS
+  Vout:             32.997V    PASS
+  power in A:       0.357W    PASS
+  power in B:       0.360W    PASS
+  power in C:       0.485W    PASS
+  power out A:      0.011W    PASS
+  power out B:      0.011W    PASS
+  power out C:      0.011W    PASS
+  efficiency A:     3.20%    PASS
+  efficiency B:     3.19%    PASS
+  efficiency C:     2.33%    PASS
+  duty A:           91.75%    PASS
+  duty B:           92.18%    PASS
+  duty C:           90.89%    PASS
+  power loss A:     0.345W    PASS
+  power loss B:     0.349W    PASS
+  power loss C:     0.474W    PASS
+  power in:         1.202W    PASS
+  power out:        0.034W    PASS
+  efficiency:       2.85%    PASS
+  Vloss cable load: -2mV    PASS
+  Vloss cable A:    -2mV    PASS
+  Vloss cable B:    -3mV    PASS
+  Vloss cable C:    -3mV    PASS
+Test time: 47.3sec
+Buck 005 - normal mode, 15W
+  current A:        0.5002A | compensated: 0.4937A    PASS
+  current B:        0.5002A | compensated: 0.4937A    PASS
+  current C:        0.5002A | compensated: 0.4937A    PASS
+  voltage A TP425:  0.072V    PASS
+  voltage B TP325:  0.072V    PASS
+  voltage C TP225:  0.073V    PASS
+  input voltage A:  9.995V    PASS
+  input voltage B:  10.125V    PASS
+  input voltage C:  10.151V    PASS
+  output voltage A: 7.262V    PASS
+  output voltage B: 7.332V    PASS
+  output voltage C: 7.169V    PASS
+  load current:     0.625A    PASS
+  load voltage:     21.756V    PASS
+  Vout:             21.763V    PASS
+  power in A:       4.934W    PASS
+  power in B:       4.999W    PASS
+  power in C:       5.012W    PASS
+  power out A:      4.538W    PASS
+  power out B:      4.581W    PASS
+  power out C:      4.479W    PASS
+  efficiency A:     91.95%    PASS
+  efficiency B:     91.64%    PASS
+  efficiency C:     89.37%    PASS
+  duty A:           72.66%    PASS
+  duty B:           72.41%    PASS
+  duty C:           70.63%    PASS
+  power loss A:     0.397W    PASS
+  power loss B:     0.418W    PASS
+  power loss C:     0.533W    PASS
+  power in:         14.945W    PASS
+  power out:        13.597W    PASS
+  efficiency:       90.98%    PASS
+  Vloss cable load: 6mV    PASS
+  Vloss cable A:    15mV    PASS
+  Vloss cable B:    13mV    PASS
+  Vloss cable C:    13mV    PASS
+  Daisy Vout A:     7.22V    PASS
+  Daisy Vout B:     7.30V    PASS
+  Daisy Vout C:     7.22V    PASS
+  Daisy Vin A:       9.95V    PASS
+  Daisy Vin B:      10.12V    PASS
+  Daisy Vin C:      10.12V    PASS
+  Daisy temp A:     26degC    PASS
+  Daisy temp B:     26degC    PASS
+  Daisy temp C:     26degC    PASS
+Test time: 52.4sec
+Buck 006 - normal mode, 90W
+  current A:        3.0000A | compensated: 2.9935A    PASS
+  current B:        3.0005A | compensated: 2.9940A    PASS
+  current C:        3.0008A | compensated: 2.9943A    PASS
+  voltage A TP425:  0.339V    PASS
+  voltage B TP325:  0.338V    PASS
+  voltage C TP225:  0.342V    PASS
+  input voltage A:  9.998V    PASS
+  input voltage B:  10.127V    PASS
+  input voltage C:  10.152V    PASS
+  output voltage A: 8.839V    PASS
+  output voltage B: 8.960V    PASS
+  output voltage C: 8.950V    PASS
+  load current:     3.333A    PASS
+  load voltage:     26.626V    PASS
+  Vout:             26.736V    PASS
+  power in A:       29.929W    PASS
+  power in B:       30.321W    PASS
+  power in C:       30.400W    PASS
+  power out A:      29.458W    PASS
+  power out B:      29.861W    PASS
+  power out C:      29.828W    PASS
+  efficiency A:     98.43%    PASS
+  efficiency B:     98.48%    PASS
+  efficiency C:     98.12%    PASS
+  duty A:           88.40%    PASS
+  duty B:           88.47%    PASS
+  duty C:           88.15%    PASS
+  power loss A:     0.471W    PASS
+  power loss B:     0.460W    PASS
+  power loss C:     0.572W    PASS
+  power in:         90.650W    PASS
+  power out:        89.104W    PASS
+  efficiency:       98.29%    PASS
+  Vloss cable load: 110mV    PASS
+  Vloss cable A:    98mV    PASS
+  Vloss cable B:    88mV    PASS
+  Vloss cable C:    94mV    PASS
+  Daisy Vout A:     8.79V    PASS
+  Daisy Vout B:     8.87V    PASS
+  Daisy Vout C:     8.96V    PASS
+  Daisy Vin A:       9.95V    PASS
+  Daisy Vin B:      10.12V    PASS
+  Daisy Vin C:      10.12V    PASS
+  Daisy temp A:     27degC    PASS
+  Daisy temp B:     27degC    PASS
+  Daisy temp C:     27degC    PASS
+Test time: 58.3sec
+Buck 007 - normal mode, 180W
+  current A:        5.9999A | compensated: 5.9934A    PASS
+  current B:        6.0008A | compensated: 5.9943A    PASS
+  current C:        6.0014A | compensated: 5.9949A    PASS
+  voltage A TP425:  1.193V    PASS
+  voltage B TP325:  1.190V    PASS
+  voltage C TP225:  1.205V    PASS
+  input voltage A:  10.004V    PASS
+  input voltage B:  10.132V    PASS
+  input voltage C:  10.155V    PASS
+  output voltage A: 4.831V    PASS
+  output voltage B: 4.895V    PASS
+  output voltage C: 4.896V    PASS
+  load current:     11.999A    PASS
+  load voltage:     14.164V    PASS
+  Vout:             14.576V    PASS
+  power in A:       59.959W    PASS
+  power in B:       60.736W    PASS
+  power in C:       60.876W    PASS
+  power out A:      57.970W    PASS
+  power out B:      58.735W    PASS
+  power out C:      58.745W    PASS
+  efficiency A:     96.68%    PASS
+  efficiency B:     96.71%    PASS
+  efficiency C:     96.50%    PASS
+  duty A:           48.29%    PASS
+  duty B:           48.31%    PASS
+  duty C:           48.21%    PASS
+  power loss A:     1.989W    PASS
+  power loss B:     2.001W    PASS
+  power loss C:     2.131W    PASS
+  power in:         181.571W    PASS
+  power out:        174.908W    PASS
+  efficiency:       96.33%    PASS
+  Vloss cable load: 412mV    PASS
+  Vloss cable A:    177mV    PASS
+  Vloss cable B:    177mV    PASS
+  Vloss cable C:    186mV    PASS
+  Daisy Vout A:     4.81V    PASS
+  Daisy Vout B:     4.89V    PASS
+  Daisy Vout C:     4.89V    PASS
+  Daisy Vin A:       9.95V    PASS
+  Daisy Vin B:      10.12V    PASS
+  Daisy Vin C:      10.12V    PASS
+  Daisy temp A:     27degC    PASS
+  Daisy temp B:     27degC    PASS
+  Daisy temp C:     27degC    PASS
+Test time: 64.4sec
+Programming communication firmware
+  EFM8_Comm_Release4k_v1_2_1.hex  PASS
+Test time: 66.0sec
+Test time: 71.1sec
+Sunspec bridge
+  getting unique id..
+    unique id: 0x0A8DF86F - 177076335    PASS
+  daisy chain current: 1.112A    PASS
+Test time: 77.0sec
+Test successful
